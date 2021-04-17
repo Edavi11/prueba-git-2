@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Conversor de Unidades</title>
+</head>
+<body>
+    <h1 class="Conversor">Conversor de Unidades</h1>
+
+    <!--  Start div contenedor de la interfaz -->
+    <div class="container_convertidor"> 
+        
+        <!-- Start Lista de seleción de unidad -->
+        <p class="Tipo_conversion">Tipo Conversión</p> 
+        <input list="Unidades" class="decorador_lista" name="Unidades" placeholder="Unidades">
+        <datalist id="Unidades"> 
+            <option value="Distancia">
+            <option value="Tiempo">
+            <option value="Masa">
+            <option value="Calorias">
+            <option value="Archivos">
+        </datalist>
+        <!-- End Lista de seleción de unidad -->
+
+        <!-- Start input text valor a transformar -->
+        <p class="Quiero">Quiero Convertir:</p>
+        <input type="text" name="valor_a_transformar" id="valor_a_transformar">
+        <!-- End input text valor a transformar -->
+
+        <!-- Start Lista de seleción unidad a convertir -->
+        <p class="De">de</p>
+        <input list="Distancia" name="Distancia" placeholder="m" class="decorador_lista">
+        <datalist id="Distancia">
+            <option value="km">
+            <option value="hm">
+            <option value="dam">
+            <option value="m">
+            <option value="dm">
+            <option value="cm">
+            <option value="mm">
+        </datalist>
+        <!-- End Lista de seleción unidad a convertir -->
+
+        <!-- Start Lista de unidad de conversion final -->
+        <p class="A">a</p>
+        <input list="Conversion" name="Conversion" placeholder="m" class="decorador_lista">
+        <datalist id="Conversion">
+            <option value="km">
+            <option value="hm">
+            <option value="dam">
+            <option value="m">
+            <option value="dm">
+            <option value="cm">
+            <option value="mm">
+        </datalist>
+        <!-- End Lista de unidad de conversion final -->
+
+        <!-- Start Boton de convertir -->
+        <button class="Convertir">Convertir</button>
+        <p class="Resultado">Resultado:</p>
+        <!-- End Boton de convertir  -->
+
+        <!-- Input text para mostrar el resultado -->
+        <input type="text" name="Resultado_final" id="Resultado_final">
+
+    <!-- End div contenedor de la interfaz-->
+    </div>
+</body>
+</html>
