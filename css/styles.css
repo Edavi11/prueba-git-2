@@ -1,0 +1,287 @@
+/* Prueba git */
+/* Start Diseño Mobile First */
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 20vh 1fr;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/v11_3.png);
+  background-repeat: no-repeat;
+}
+
+/* Start Etiqueta <h1>{Conversor de unidades} */
+.Conversor {
+  grid-column: 2 / 7;
+  grid-row: 1 / 2;
+  font-size: 1.5rem;
+  text-align: center;
+  align-self: flex-end;
+}
+/* End Etiqueta </h1>{Conversor de unidades} */
+
+/* Start div container */
+.container_convertidor {
+  grid-column: 2 / 7;
+  grid-row: 2 / 3;
+  background-color: #dbcb8b;
+  height: 25rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  box-shadow: 0px 0px 3px #222;
+  align-self: flex-start;
+}
+/* End div container */
+
+/* Start etiqueta p{Tipo de convercion} */
+.Tipo_conversion {
+  grid-column: 2 / 7;
+  font-size: 1.2rem;
+  text-align: center;
+}
+/* End etiqueta p{Tipo de convercion} */
+
+/* Start Input list selección de unidad */
+input[name="Unidades"] {
+  grid-column: 2 / 7;
+  grid-row: 2 / 3;
+  margin: 10px;
+}
+/* End Input list selección de unidad */
+
+/* Start Clase para decorar los input list */
+.decorador_lista{
+    height: 5vh;
+    width: 35vw;
+    background-color: #E7965A;
+    border: 2px solid #333;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 1.2rem;
+    outline: none;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+}
+/* End Clase para decorar los input list */
+
+/* Start etiqueta p{Quiero convertir} */
+.Quiero{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+    margin-left: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+/* End etiqueta p{Quiero convertir} */
+
+/* Start inpurt text valor a transformar */
+#valor_a_transformar{
+    grid-column: 5 / 8;
+    grid-row: 3 / 4;
+    height: 2rem;
+    width: 5rem;
+    font-size: 1.2rem;
+    align-self: center;
+    text-align: center;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: thin solid #000;
+    background-color: #F9F3E1;
+  }
+/* End input text valor a transformar */
+
+/* Start etiqueta p{de} */
+.De{
+    grid-column: 1 / 2 ;
+    grid-row: 4 / 5;
+    justify-self: flex-end;
+}
+/* End etiqueta p{de} */
+
+/* Start Input selección unidad a convertir */
+input[name="Distancia"] {
+  grid-column: 2 / 4 ;
+  grid-row: 4 / 5;
+  width: 17vw;
+  justify-self: flex-end;
+  font-size: 0.9rem;
+}
+/* End Input selección unidad a convertir */
+
+
+/* Start etiqueta p{a} */
+.A{
+  grid-column: 4 / 5 ;
+  grid-row: 4 / 5;
+  justify-self: flex-end;
+}
+/* End etiqueta p{a} */
+
+/* Start input selección de unidad a transformar */
+input[name="Conversion"] {
+  grid-column: 5 / 7 ;
+  grid-row: 4 / 5;
+  width: 17vw;
+  justify-self: center;
+  font-size: 0.9rem;
+  justify-self: flex-end;
+}
+/* End input selección de unidad a transformar */
+
+/* Start modificar color del placeholder */
+input[name="Unidades"]::-webkit-input-placeholder,
+input[name="Distancia"]::-webkit-input-placeholder,
+input[name="Conversion"]::-webkit-input-placeholder{
+  color: #000;
+}
+/* End modificar color del placeholder */
+
+/* Start button convertir */
+.Convertir{
+  grid-column: 2 / 7 ;
+  grid-row: 5 / 7;
+  font-size: 1.2rem;
+  background-color: #38918A;
+  text-decoration: none;
+  text-align: center;
+  height: 7vh;
+  width: 35vw;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  border: thin 1px solid #000;
+  margin-top: 40px;
+}
+/* End button convertir */
+
+/* Start etiquta p{resultado} */
+.Resultado{
+  grid-column: 2 / 5 ;
+  grid-row: 9 / 10;
+  font-size: 1.2rem;
+  align-self: center;
+  justify-self: center;
+}
+/* End etiquta p{resultado}*/
+
+/* Start input text mostrar el resultado */
+input[name="Resultado_final"] {
+  grid-column: 4 / 8 ;
+  grid-row: 9 / 10;
+  outline: none;
+  height: 2rem;
+  width: 5rem;
+  align-self: center;
+  justify-self: center;
+  padding: 0px;
+  font-size: 1.2rem;
+  background-color: #F9F3E1;
+  border-radius: 5px;
+  border: thin solid #000;
+}
+/* End input text mostrar el resultado */
+
+/* Media Query Desktop */
+@media screen and (min-width: 1024px) {
+
+  .container_convertidor {
+    grid-column: 3 / 6;
+  }  
+
+  .Conversor {
+    grid-column: 2 / 7;
+    grid-row: 1 / 2;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: flex-end;
+  }
+
+  input[name="Unidades"] {
+    grid-column: 2 / 7;
+    grid-row: 2 / 3;
+    margin: 10px;
+  }
+
+  .decorador_lista{
+    width: 18vw;
+  }
+
+  input[name="Distancia"] {
+    width: 10vw;
+  }
+
+  input[name="Conversion"] {
+    width: 10vw;
+  }
+
+  .Convertir{
+    width: 20vw;
+  }
+
+  input[name="Resultado_final"] {
+    grid-column: 5 / 8;
+    width: 5rem;
+    text-align: center;
+    justify-self: flex-start;
+  }
+}
+
+/* Media Query Tablets */
+@media screen and (min-width: 768px) {
+
+  .container_convertidor {
+    grid-column: 3 / 6;
+  }  
+
+  .Conversor {
+    grid-column: 2 / 7;
+    grid-row: 1 / 2;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: flex-end;
+  }
+
+  input[name="Unidades"] {
+    grid-column: 2 / 7;
+    grid-row: 2 / 3;
+    margin: 10px;
+  }
+
+  .decorador_lista{
+    width: 18vw;
+  }
+
+  input[name="Distancia"] {
+    width: 10vw;
+  }
+
+  input[name="Conversion"] {
+    width: 10vw;
+  }
+
+  .Convertir{
+    width: 20vw;
+  }
+
+  input[name="Resultado_final"] {
+    grid-column: 5 / 8;
+    width: 5rem;
+    text-align: center;
+    justify-self: flex-start;
+  }
+}
